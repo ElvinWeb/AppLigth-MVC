@@ -1,0 +1,17 @@
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Business.deps.json
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Business.dll
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Business.pdb
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Core.dll
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Data.dll
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Data.pdb
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\bin\Debug\net7.0\AppLight.Core.pdb
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.csproj.AssemblyReference.cache
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.AssemblyInfoInputs.cache
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.AssemblyInfo.cs
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.csproj.CopyComplete
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.dll
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\refint\AppLight.Business.dll
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\AppLight.Business.pdb
+C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Business\obj\Debug\net7.0\ref\AppLight.Business.dll

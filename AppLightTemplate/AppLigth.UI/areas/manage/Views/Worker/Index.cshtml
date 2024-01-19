@@ -1,0 +1,48 @@
+﻿@{
+    var counter = 0;
+}
+@section cssLinks{
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.min.css" rel="stylesheet">
+}
+
+<style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="header">
+        <h1 class="title">Workers Table</h1>
+        <a class="btn btn-primary">Create</a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <a class="btn btn-warning">Update</a>
+                    <a class="btn btn-danger delete-btn">Delete</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+@section jsLinks{
+    <script src="~/admin/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js"></script>
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AppLigth.UI.props" />
+</Project>
