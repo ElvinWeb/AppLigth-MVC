@@ -1,4 +1,8 @@
-﻿using AppLight.Core.Entities;
+﻿using AppLight.Business.CustomExceptions.General;
+using AppLight.Business.CustomExceptions.WorkerImage;
+using AppLight.Business.Services.Service;
+using AppLight.Core.Entities;
+using AppLight.Data.Repositories.Implementations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppLigth.UI.areas.manage.Controllers
@@ -6,13 +10,17 @@ namespace AppLigth.UI.areas.manage.Controllers
     [Area("manage")]
     public class WorkerController : Controller
     {
-        public WorkerController()
+        private readonly IWorkerService _workerService;
+
+        public WorkerController(IWorkerService workerService)
         {
-            
+            _workerService = workerService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<Worker> workers = await _workerService.GetAllWorkersAsync();
+
+            return View(workers);
         }
         [HttpGet]
         public IActionResult Create()
@@ -21,25 +29,101 @@ namespace AppLigth.UI.areas.manage.Controllers
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public IActionResult Create(Worker worker)
+        public async Task<IActionResult> Create(Worker worker)
         {
-            return View();
+            if (!ModelState.IsValid) return View(worker);
+
+            try
+            {
+                await _workerService.CreateAsync(worker);
+            }
+            catch (InvalidImageContentTypeOrSize ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(worker);
+            }
+            catch (ImageRequired ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(worker);
+            }
+            catch (Exception ex)
+            {
+                return View(worker);
+            }
+
+            return RedirectToAction("index", "worker");
         }
         [HttpGet]
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
-            return View();
+            Worker worker = null;
+            try
+            {
+                worker = await _workerService.GetWorkerAsync(id);
+            }
+            catch (InvalidIdOrBelowThanZero ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(worker);
+            }
+            catch (Exception ex)
+            {
+                return View(worker);
+            }
+
+            return View(worker);
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public IActionResult Update(Worker worker)
+        public async Task<IActionResult> Update(Worker worker)
         {
-            return View();
+            if (!ModelState.IsValid) return View(worker);
+
+            try
+            {
+                await _workerService.UpdateAsync(worker);
+            }
+            catch (InvalidImageContentTypeOrSize ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(worker);
+            }
+            catch (InvalidEntityException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(worker);
+            }
+            catch (Exception ex)
+            {
+                return View(worker);
+            }
+
+            return RedirectToAction("index", "worker");
         }
         [HttpGet]
-        public IActionResult SoftDelete(int id)
+        public async Task<IActionResult> SoftDelete(int id)
         {
-            return View();
+            try
+            {
+                await _workerService.SoftDelete(id);
+            }
+            catch (InvalidIdOrBelowThanZero ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (InvalidEntityException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
+
+            return Ok();
         }
     }
 }

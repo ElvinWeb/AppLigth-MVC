@@ -1,1 +1,23 @@
-﻿
+﻿@model Setting
+<style>
+    .form-container {
+        padding: 50px;
+        max-width: 600px;
+        border-radius: 5px;
+    }
+</style>
+<div class="container form-container shadow">
+    <h1 class="title">Update a Setting</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Value" class="form-label">FullName</label>
+            <input asp-for="Value" class="form-control">
+            <span asp-validation-for="Value" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-info" asp-action="index" asp-controller="setting">Back To Home</a>
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </form>
+</div>

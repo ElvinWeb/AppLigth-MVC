@@ -1,1 +1,46 @@
-﻿
+﻿@model List<Setting>
+@{
+    var counter = 0;
+}
+
+<style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .img {
+        width: 36%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="header">
+        <h1 class="title">Settings Table</h1>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">FullName</th>
+                <th scope="col">Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var setting in Model)
+            {
+                counter++;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@setting.Key</td>
+                    <td>@setting.Value</td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="update" asp-controller="setting" asp-route-id="@setting.Id">Update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

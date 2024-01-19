@@ -10,3 +10,15 @@ C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\refi
 C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.pdb
 C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\ref\AppLight.Core.dll
 C:\Users\II novbe\Documents\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.csproj.AssemblyReference.cache
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\bin\Debug\net7.0\AppLight.Core.deps.json
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\bin\Debug\net7.0\AppLight.Core.dll
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\bin\Debug\net7.0\AppLight.Core.pdb
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.csproj.AssemblyReference.cache
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.AssemblyInfoInputs.cache
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.AssemblyInfo.cs
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.dll
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\refint\AppLight.Core.dll
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\AppLight.Core.pdb
+C:\Users\II novbe\Documents\ExamPractice\AppLightTemplate\AppLight.Core\obj\Debug\net7.0\ref\AppLight.Core.dll

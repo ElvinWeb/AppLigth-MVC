@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Worker>
+@{
     var counter = 0;
 }
 @section cssLinks{
@@ -12,33 +13,42 @@
         justify-content: space-between;
         margin-bottom: 15px;
     }
+
+    .img {
+        width: 36%;
+    }
 </style>
 <div class="container-fluid">
     <div class="header">
         <h1 class="title">Workers Table</h1>
-        <a class="btn btn-primary">Create</a>
+        <a class="btn btn-primary" asp-action="create" asp-controller="worker">Create</a>
     </div>
 
     <table class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">FullName</th>
+                <th scope="col">Position</th>
+                <th scope="col">Worker-Image</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>
-                    <a class="btn btn-warning">Update</a>
-                    <a class="btn btn-danger delete-btn">Delete</a>
-                </td>
-            </tr>
+            @foreach (var worker in Model)
+            {
+                counter++;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@worker.FullName</td>
+                    <td>@worker.Position</td>
+                    <td><img src="~/uploads/workers-images/@worker.ImgUrl" class="img" /></td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="update" asp-controller="worker" asp-route-id="@worker.Id">Update</a>
+                        <a class="btn btn-danger delete-btn" asp-action="softDelete" asp-controller="worker" asp-route-id="@worker.Id">Delete</a>
+                    </td>
+                </tr>
 
+            }
         </tbody>
     </table>
 </div>

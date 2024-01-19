@@ -27,6 +27,8 @@ namespace AppLight.Business.Services.Implementations
 
         public async Task<Setting> GetSettingAsync(int id)
         {
+            if (id == null && id <= 0) throw new InvalidIdOrBelowThanZero("", "Id couldn't be null or less than zero");
+
             return await _settingRepository.GetByIdAysnc(x => !x.IsDeleted && x.Id == id);
         }
 

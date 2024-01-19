@@ -1,6 +1,8 @@
-﻿using AppLight.Business.Services.Service;
+﻿using AppLight.Business.CustomExceptions.General;
+using AppLight.Business.Services.Service;
 using AppLight.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Dynamic;
 
 namespace AppLigth.UI.areas.manage.Controllers
 {
@@ -14,21 +16,56 @@ namespace AppLigth.UI.areas.manage.Controllers
             _settingService = settingService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<Setting> settingList = await _settingService.GetAllSettingsAsync();
+
+            return View(settingList);
         }
 
         [HttpGet]
-        public IActionResult Update()
+        public async Task<IActionResult> Update(int id)
         {
-            return View();
+            Setting setting = null;
+
+            try
+            {
+                setting = await _settingService.GetSettingAsync(id);
+            }
+            catch (InvalidIdOrBelowThanZero ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(setting);
+            }
+            catch (Exception ex)
+            {
+                return View(setting);
+            }
+
+            if (setting == null) return View();
+
+            return View(setting);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Setting setting)
+        public async Task<IActionResult> Update(Setting setting)
         {
-            return View();
+            try
+            {
+                await _settingService.UpdateAsync(setting);
+            }
+            catch (InvalidEntityException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View(setting);
+
+            }
+            catch (Exception ex)
+            {
+                return View(setting);
+            }
+
+            return RedirectToAction("index", "setting");
         }
 
     }
