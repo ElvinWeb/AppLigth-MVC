@@ -27,7 +27,7 @@ namespace AppLight.Business.Services.Implementations
 
         public async Task<Setting> GetSettingAsync(int id)
         {
-            if (id == null && id <= 0) throw new InvalidIdOrBelowThanZero("", "Id couldn't be null or less than zero");
+            if (id == null || id <= 0) throw new InvalidIdOrBelowThanZero();
 
             return await _settingRepository.GetByIdAysnc(x => !x.IsDeleted && x.Id == id);
         }
@@ -35,7 +35,7 @@ namespace AppLight.Business.Services.Implementations
         public async Task UpdateAsync(Setting setting)
         {
             Setting wantedSetting = await _settingRepository.GetByIdAysnc(x => x.Id == setting.Id && !x.IsDeleted);
-            if (wantedSetting == null) throw new InvalidEntityException("", "Entity is null here!");
+            if (wantedSetting == null) throw new InvalidEntityException();
 
             wantedSetting.Value = setting.Value;
             wantedSetting.UpdatedDate = DateTime.UtcNow.AddHours(4);

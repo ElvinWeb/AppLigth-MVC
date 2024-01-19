@@ -1,5 +1,6 @@
 ﻿using AppLight.Business.CustomExceptions.General;
 using AppLight.Business.Services.Service;
+using AppLight.Business.ViewModels;
 using AppLight.Core.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -36,12 +37,12 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (InvalidIdOrBelowThanZero ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View(setting);
+                return View("error");
             }
             catch (Exception ex)
             {
-                return View(setting);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             if (setting == null) return View();
@@ -64,7 +65,8 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (Exception ex)
             {
-                return View(setting);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             return RedirectToAction("index", "setting");

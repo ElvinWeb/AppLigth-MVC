@@ -51,7 +51,8 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (Exception ex)
             {
-                return View(worker);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             return RedirectToAction("index", "worker");
@@ -66,12 +67,12 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (InvalidIdOrBelowThanZero ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View(worker);
+                return View("error");
             }
             catch (Exception ex)
             {
-                return View(worker);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             return View(worker);
@@ -93,12 +94,12 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (InvalidEntityException ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View(worker);
+                return View("error");
             }
             catch (Exception ex)
             {
-                return View(worker);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             return RedirectToAction("index", "worker");
@@ -112,22 +113,22 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (InvalidIdOrBelowThanZero ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+                return View("error");
             }
             catch (InvalidEntityException ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+                return View("error");
             }
             catch (Exception ex)
             {
+                ModelState.AddModelError("", "unexpected error!");
                 return View();
             }
 
             return Ok();
         }
 
+        //[Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
@@ -137,20 +138,19 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (InvalidIdOrBelowThanZero ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+                return View("error");
             }
             catch (InvalidEntityException ex)
             {
-                ModelState.AddModelError(ex.PropertyName, ex.Message);
-                return View();
+                return View("error");
             }
             catch (Exception ex)
             {
+                ModelState.AddModelError("", "unexpected error!");
                 return View();
             }
 
-            return View("index", "worker");
+            return RedirectToAction("index", "worker");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "djT+1nQOb0rGjBbtaILh6NZEPlsmtmEV3k608KWBduQ=",
+  "Hash": "y+V6Dha8xPIxOY8z+LZhMdiJzYD17lFEf6YaAr5Aw7E=",
   "Source": "AppLigth.UI",
   "BasePath": "_content/AppLigth.UI",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AppLigth.UI.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\404\\css\\style.css",
+      "SourceId": "AppLigth.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
+      "BasePath": "_content/AppLigth.UI",
+      "RelativePath": "404/css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\404\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\admin\\css\\sb-admin-2.css",
@@ -31909,6 +31926,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\wow.min.js"
     },
     {
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\225e4a29-0848-4f8c-bed9-ebfe6d7f3b68t1.jpg",
+      "SourceId": "AppLigth.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
+      "BasePath": "_content/AppLigth.UI",
+      "RelativePath": "uploads/workers-images/225e4a29-0848-4f8c-bed9-ebfe6d7f3b68t1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\225e4a29-0848-4f8c-bed9-ebfe6d7f3b68t1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\33182a5e-4b6b-43a5-b1cc-49285d93142fuser3.jpg",
+      "SourceId": "AppLigth.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
+      "BasePath": "_content/AppLigth.UI",
+      "RelativePath": "uploads/workers-images/33182a5e-4b6b-43a5-b1cc-49285d93142fuser3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\33182a5e-4b6b-43a5-b1cc-49285d93142fuser3.jpg"
+    },
+    {
       "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\33510229-c670-4e04-8892-6a724bf64736user3.jpg",
       "SourceId": "AppLigth.UI",
       "SourceType": "Discovered",
@@ -31943,12 +31994,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\3a794d3f-924d-41b6-b7ae-abbe86502d01user2.jpg"
     },
     {
-      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg",
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\4919b7fe-5b84-4048-97dd-7d1809303e44user1.jpg",
       "SourceId": "AppLigth.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
       "BasePath": "_content/AppLigth.UI",
-      "RelativePath": "uploads/workers-images/a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg",
+      "RelativePath": "uploads/workers-images/4919b7fe-5b84-4048-97dd-7d1809303e44user1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31957,7 +32008,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\4919b7fe-5b84-4048-97dd-7d1809303e44user1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\9693a168-58c4-4b4c-8259-934cc9f1fc4bt3.jpg",
+      "SourceId": "AppLigth.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
+      "BasePath": "_content/AppLigth.UI",
+      "RelativePath": "uploads/workers-images/9693a168-58c4-4b4c-8259-934cc9f1fc4bt3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\9693a168-58c4-4b4c-8259-934cc9f1fc4bt3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\c86cdbd6-03a4-4566-a9a1-c07daec75e4fuser2.jpg",
+      "SourceId": "AppLigth.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\",
+      "BasePath": "_content/AppLigth.UI",
+      "RelativePath": "uploads/workers-images/c86cdbd6-03a4-4566-a9a1-c07daec75e4fuser2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\workers-images\\c86cdbd6-03a4-4566-a9a1-c07daec75e4fuser2.jpg"
     }
   ]
 }

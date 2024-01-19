@@ -42,7 +42,8 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
             catch (Exception ex)
             {
-                return View(adminLoginViewModel);
+                ModelState.AddModelError("", "unexpected error!");
+                return View();
             }
 
             return RedirectToAction("index", "worker");

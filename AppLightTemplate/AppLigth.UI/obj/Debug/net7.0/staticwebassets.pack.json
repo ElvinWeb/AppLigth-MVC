@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AppLigth.UI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\404\\css\\style.css",
+      "PackagePath": "staticwebassets\\404\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\admin\\css\\sb-admin-2.css",
       "PackagePath": "staticwebassets\\admin\\css\\sb-admin-2.css"
     },
@@ -7501,6 +7505,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
     },
     {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\225e4a29-0848-4f8c-bed9-ebfe6d7f3b68t1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\225e4a29-0848-4f8c-bed9-ebfe6d7f3b68t1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\33182a5e-4b6b-43a5-b1cc-49285d93142fuser3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\33182a5e-4b6b-43a5-b1cc-49285d93142fuser3.jpg"
+    },
+    {
       "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\33510229-c670-4e04-8892-6a724bf64736user3.jpg",
       "PackagePath": "staticwebassets\\uploads\\workers-images\\33510229-c670-4e04-8892-6a724bf64736user3.jpg"
     },
@@ -7509,8 +7521,16 @@
       "PackagePath": "staticwebassets\\uploads\\workers-images\\3a794d3f-924d-41b6-b7ae-abbe86502d01user2.jpg"
     },
     {
-      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg",
-      "PackagePath": "staticwebassets\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg"
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\4919b7fe-5b84-4048-97dd-7d1809303e44user1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\4919b7fe-5b84-4048-97dd-7d1809303e44user1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\9693a168-58c4-4b4c-8259-934cc9f1fc4bt3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\9693a168-58c4-4b4c-8259-934cc9f1fc4bt3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\c86cdbd6-03a4-4566-a9a1-c07daec75e4fuser2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\c86cdbd6-03a4-4566-a9a1-c07daec75e4fuser2.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AppLigth.UI.Microsoft.AspNetCore.StaticWebAssets.props",

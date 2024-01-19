@@ -42,6 +42,7 @@ namespace AppLight.Business.Services.Implementations
             }
 
             worker.CreatedDate = DateTime.UtcNow.AddHours(4);
+            worker.UpdatedDate = DateTime.UtcNow.AddHours(4);
             worker.ImgUrl = await Helper.GetFileName(_webHostEnvironment.WebRootPath, "uploads/workers-images", worker.Image);
 
             await _workerRepository.CreateAsync(worker);
@@ -50,7 +51,7 @@ namespace AppLight.Business.Services.Implementations
 
         public async Task DeleteAsync(int id)
         {
-            if (id == null && id <= 0) throw new InvalidIdOrBelowThanZero("", "Id couldn't be null or less than zero");
+            if (id == null || id <= 0) throw new InvalidIdOrBelowThanZero();
 
             Worker wantedWorker = await _workerRepository.GetByIdAysnc(x => x.Id == id && !x.IsDeleted);
             if (wantedWorker == null) throw new InvalidEntityException("", "Entity is null here!");
@@ -73,29 +74,27 @@ namespace AppLight.Business.Services.Implementations
 
         public async Task<Worker> GetWorkerAsync(int id)
         {
-            if (id == null && id <= 0) throw new InvalidIdOrBelowThanZero("", "Id couldn't be null or less than zero");
+            if (id == null || id <= 0) throw new InvalidIdOrBelowThanZero();
 
             return await _workerRepository.GetByIdAysnc(x => x.Id == id && !x.IsDeleted);
         }
 
         public async Task SoftDelete(int id)
         {
-            if (id == null && id <= 0) throw new InvalidIdOrBelowThanZero("", "Id couldn't be null or less than zero");
+            if (id == null || id <= 0) throw new InvalidIdOrBelowThanZero();
 
             Worker wantedWorker = await _workerRepository.GetByIdAysnc(x => x.Id == id && !x.IsDeleted);
-            if (wantedWorker == null) throw new InvalidEntityException("", "Entity is null here!");
+            if (wantedWorker == null) throw new InvalidEntityException();
 
             wantedWorker.IsDeleted = !wantedWorker.IsDeleted;
 
-
-            _workerRepository.Delete(wantedWorker);
             await _workerRepository.SaveAsync();
         }
 
         public async Task UpdateAsync(Worker worker)
         {
             Worker wantedWorker = await _workerRepository.GetByIdAysnc(x => x.Id == worker.Id && !x.IsDeleted);
-            if (wantedWorker == null) throw new InvalidEntityException("", "Entity is null here!");
+            if (wantedWorker == null) throw new InvalidEntityException();
 
             if (worker.Image != null)
             {
