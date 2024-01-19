@@ -10,5 +10,6 @@ namespace AppLight.Business.Services.Service
     public interface IAccountService
     {
         Task Login(AdminLoginViewModel adminLoginViewModel);
+        Task Logout();
     }
 }

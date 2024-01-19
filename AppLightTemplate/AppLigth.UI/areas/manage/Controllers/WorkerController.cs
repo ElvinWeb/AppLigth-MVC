@@ -3,11 +3,13 @@ using AppLight.Business.CustomExceptions.WorkerImage;
 using AppLight.Business.Services.Service;
 using AppLight.Core.Entities;
 using AppLight.Data.Repositories.Implementations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppLigth.UI.areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class WorkerController : Controller
     {
         private readonly IWorkerService _workerService;
@@ -124,6 +126,31 @@ namespace AppLigth.UI.areas.manage.Controllers
             }
 
             return Ok();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await _workerService.DeleteAsync(id);
+            }
+            catch (InvalidIdOrBelowThanZero ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (InvalidEntityException ex)
+            {
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
+
+            return View("index", "worker");
         }
     }
 }

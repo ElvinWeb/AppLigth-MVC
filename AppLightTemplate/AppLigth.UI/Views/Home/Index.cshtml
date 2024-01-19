@@ -1,4 +1,8 @@
-﻿ 
+﻿@model List<Worker>
+@inject LayoutService service
+@{
+    var Settings = await service.GetSettings();
+}
 
 <!-------Banner Start------->
 <section class="banner" data-scroll-index='0'>
@@ -162,27 +166,18 @@
                 </div>
                 <div class="section-content text-center">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="team-detail wow bounce" data-wow-delay="0.2s">
-                                <img src="~/assets/images/user1.jpg" class="img-fluid" />
-                                <h4>Nitu Singh</h4>
-                                <p>Marketing Specialist</p>
+                        @foreach (var worker in Model)
+                        {
+
+                            <div class="col-md-4">
+                                <div class="team-detail wow bounce" data-wow-delay="0.2s">
+                                    <img src="~/uploads/workers-images/@worker.ImgUrl" class="img-fluid" />
+                                    <h4>@worker.FullName</h4>
+                                    <p>@worker.Position</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-detail wow bounce" data-wow-delay="0.4s">
-                                <img src="~/assets/images/user2.jpg" class="img-fluid" />
-                                <h4>Yogesh Singh</h4>
-                                <p>CEO & Founder</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-detail wow bounce" data-wow-delay="0.6s">
-                                <img src="~/assets/images/user3.jpg" class="img-fluid" />
-                                <h4>Nisha Sharma</h4>
-                                <p>Web Developer</p>
-                            </div>
-                        </div>
+
+                        }
                     </div>
                 </div>
             </div>
@@ -305,21 +300,21 @@
                                     <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
                                     <div class="media-body">
                                         <p class="text-uppercase">Address</p>
-                                        <p class="text-uppercase">New Delhi, India</p>
+                                        <p class="text-uppercase">@Settings.FirstOrDefault(x => x.Key == "Location").Value</p>
                                     </div>
                                 </div>
                                 <div class="contact-item media">
                                     <i class="fa fa-mobile media-left media-right-margin"></i>
                                     <div class="media-body">
                                         <p class="text-uppercase">Phone</p>
-                                        <p class="text-uppercase"><a class="text-white" href="tel:+15173977100">009900990099</a> </p>
+                                        <p class="text-uppercase"><a class="text-white" href="tel:+15173977100">@Settings.FirstOrDefault(x => x.Key == "Phone").Value</a> </p>
                                     </div>
                                 </div>
                                 <div class="contact-item media">
                                     <i class="fa fa-envelope media-left media-right-margin"></i>
                                     <div class="media-body">
                                         <p class="text-uppercase">E-mail</p>
-                                        <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">yogeshsingh.now@gmail.com</a> </p>
+                                        <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">@Settings.FirstOrDefault(x => x.Key == "Email").Value</a> </p>
                                     </div>
                                 </div>
                                 <div class="contact-item media">

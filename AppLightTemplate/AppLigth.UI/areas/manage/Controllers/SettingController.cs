@@ -1,12 +1,14 @@
 ﻿using AppLight.Business.CustomExceptions.General;
 using AppLight.Business.Services.Service;
 using AppLight.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
 
 namespace AppLigth.UI.areas.manage.Controllers
 {
     [Area("manage")]
+    [Authorize(Roles = "SuperAdmin")]
     public class SettingController : Controller
     {
         private readonly ISettingService _settingService;

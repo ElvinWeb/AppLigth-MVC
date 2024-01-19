@@ -7501,6 +7501,18 @@
       "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
     },
     {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\33510229-c670-4e04-8892-6a724bf64736user3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\33510229-c670-4e04-8892-6a724bf64736user3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\3a794d3f-924d-41b6-b7ae-abbe86502d01user2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\3a794d3f-924d-41b6-b7ae-abbe86502d01user2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\II novbe\\Documents\\ExamPractice\\AppLightTemplate\\AppLigth.UI\\wwwroot\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\workers-images\\a77ca373-eb1d-4675-aab3-b171320555e7user1.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AppLigth.UI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

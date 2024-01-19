@@ -2,6 +2,7 @@ using AppLight.Business;
 using AppLight.Core.Entities;
 using AppLight.Data;
 using AppLight.Data.DAL;
+using AppLigth.UI.ViewService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
